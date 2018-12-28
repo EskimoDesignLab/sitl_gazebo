@@ -45,6 +45,67 @@
           
 	</geometry>
       </visual>
+      <!--	      
+      <sensor name="deleaves_imu" type="imu">
+	<pose>0 0 -0.1 0 0 0</pose>
+	<always_on>1</always_on>
+	<update_rate>30</update_rate>
+	<imu>
+	  <topic>/gazebo/default/deleaves_clamp/imu</topic>
+	  <angular_velocity>
+	    <x>
+	      <noise type="gaussian"/>
+	    </x>
+	    <y>
+	      <noise type="gaussian"/>
+	    </y>
+	    <z>
+	      <noise type="gaussian"/>
+	    </z>
+	  </angular_velocity>
+	  <linear_acceleration>
+	    <x>
+	      <noise type="gaussian"/>
+	    </x>
+	    <y>
+	      <noise type="gaussian"/>
+	    </y>
+	    <z>
+	      <noise type="gaussian"/>
+	    </z>
+	  </linear_acceleration>
+	</imu>
+      </sensor>
+-->
     </link>
+
+    <!--
+    <plugin name='gazebo_imu_plugin' filename='libgazebo_imu_plugin.so'>
+      <robotNamespace></robotNamespace>
+      <linkName>link</linkName>
+      <imuTopic>/deleaves_clamp/imu</imuTopic>
+      <gyroscopeNoiseDensity>0.0003394</gyroscopeNoiseDensity>
+      <gyroscopeRandomWalk>3.8785e-05</gyroscopeRandomWalk>
+      <gyroscopeBiasCorrelationTime>1000.0</gyroscopeBiasCorrelationTime>
+      <gyroscopeTurnOnBiasSigma>0.0087</gyroscopeTurnOnBiasSigma>
+      <accelerometerNoiseDensity>0.004</accelerometerNoiseDensity>
+      <accelerometerRandomWalk>0.006</accelerometerRandomWalk>
+      <accelerometerBiasCorrelationTime>300.0</accelerometerBiasCorrelationTime>
+      <accelerometerTurnOnBiasSigma>0.196</accelerometerTurnOnBiasSigma>
+    </plugin>
+    <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <robotNamespace>deleaves</robotNamespace>
+      <imuSubTopic>/deleaves_clamp/imu</imuSubTopic>
+      <mavlink_addr>INADDR_ANY</mavlink_addr>
+      <mavlink_udp_port>14560</mavlink_udp_port>
+      <serialEnabled>false</serialEnabled>
+      <serialDevice>/dev/ttyACM0</serialDevice>
+      <baudRate>921600</baudRate>
+      <qgc_addr>INADDR_ANY</qgc_addr>
+      <qgc_udp_port>14550</qgc_udp_port>
+      <hil_mode>false</hil_mode>
+      <hil_state_level>false</hil_state_level>
+    </plugin>
+-->
   </model>
 </sdf>

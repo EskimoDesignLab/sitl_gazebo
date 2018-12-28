@@ -26,6 +26,8 @@
         <xyz>0 1 0</xyz>
       </axis2>
     </joint>
+    <!--
+    -->
 
   </model>
 </sdf>
